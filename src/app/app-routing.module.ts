@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'page-with-long-name',
+    loadChildren: () => import('./page-with-long-name/page-with-long-name.module').then( m => m.PageWithLongNamePageModule)
+  },
+  {
+    path: 'page-with-title',
+    loadChildren: () => import('./page-with-title/page-with-title.module').then( m => m.PageWithTitlePageModule)
+  },
 ];
 
 @NgModule({
